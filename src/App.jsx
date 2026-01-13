@@ -2,115 +2,129 @@ function App() {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
 
-      {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center px-4">
-        <div className="relative max-w-5xl w-full text-center rounded-[2.5rem]
-                        border-4 border-yellow-400
-                        shadow-[0_0_80px_rgba(212,175,55,0.9)]
-                        p-10 md:p-16">
+      {/* ===== HERO / MOBILE FIRST ===== */}
+      <section className="px-4 pt-6 pb-10 text-center">
+        <div
+          className="mx-auto max-w-md rounded-3xl border-2 border-yellow-400
+                     black-900 p-6
+                     shadow-[0_0_45px_rgba(212,175,55,0.7)]"
+        >
 
-          <div className="absolute inset-0 rounded-[2.5rem] bg-green-900 opacity-95 -z-10"></div>
-
-          {/* LOGO BILJARDS */}
+          {/* LOGO */}
           <img
             src="/logo-biljards.png"
-            alt="Baltijas Biljards Nr. 1"
-            className="mx-auto mb-8 max-w-[280px] md:max-w-[360px]
-                       drop-shadow-[0_0_25px_rgba(212,175,55,1)]"
+            alt="Baltijas Biljards Nr. 1."
+            className="mx-auto w-40 md:w-56
+                       drop-shadow-[0_0_20px_rgba(212,175,55,1)]"
           />
 
-          <p className="text-lg md:text-xl text-gray-200">
-            Profesionāls biljarda klubs Rīgā
+          {/* TITLE */}
+          <h1 className="mt-4 text-xl md:text-2xl font-semibold">
+            Profesionālais biljarda klubs Rīgā
+          </h1>
+
+          <p className="mt-2 text-sm md:text-base text-zinc-200">
+            Turnīri • Čempionāti • Biljarda skola • Bārs
           </p>
 
-          <p className="mt-2 text-gray-300">
-            Turnīri · Čempionāti · Biljarda skola · Bārs GaldOUTs
-          </p>
+          {/* ACTION BUTTONS */}
+          <div className="mt-6 flex flex-col gap-4">
+
+            <a
+              href="tel:+37129237723"
+              className="rounded-xl border-2 border-yellow-400
+                         bg-black py-3 text-center font-semibold text-yellow-400
+                         shadow-[0_0_20px_rgba(212,175,55,0.9)]
+                         hover:shadow-[0_0_30px_rgba(212,175,55,1)]
+                         transition"
+            >
+              📞 Zvanīt
+            </a>
+
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border-2 border-yellow-400
+                         bg-black py-3 text-center font-semibold text-yellow-400
+                         shadow-[0_0_15px_rgba(212,175,55,0.7)]
+                         hover:shadow-[0_0_25px_rgba(212,175,55,1)]
+                         transition"
+            >
+              📍 Karte
+            </a>
+
+          </div>
         </div>
       </section>
 
-      {/* MENU */}
-      <section className="py-24 px-4 flex justify-center">
-        <div className="w-full max-w-3xl rounded-[2.5rem]
-                        border-4 border-yellow-400
-                        shadow-[0_0_70px_rgba(212,175,55,0.8)]
-                        bg-green-900 px-8 md:px-14 py-14">
+      {/* ===== MENU ===== */}
+      <section className="px-4 pb-12">
+        <div className="mx-auto max-w-md space-y-5">
 
-          {/* LOGO GALDOUTS */}
+          {/* GALDOUTS LOGO */}
           <img
             src="/logo-galdouts.png"
-            alt="GaldOUTs Bar"
-            className="mx-auto mb-12 max-w-[220px]
-                       drop-shadow-[0_0_25px_rgba(212,175,55,0.9)]"
+            alt="GaldOUTs"
+            className="mx-auto my-6 w-32
+                       drop-shadow-[0_0_15px_rgba(212,175,55,0.9)]"
           />
 
-          <MenuBlock
-            title="ZUPAS"
-            items={[
-              ["Dienas zupa", "€"],
-              ["Soļanka", "€"],
-            ]}
-          />
+          <MenuCard title="🍲 Zupas">
+            <MenuItem name="Dienas zupa" />
+            <MenuItem name="Soļanka" />
+          </MenuCard>
 
-          <MenuBlock
-            title="OTRIE ĒDIENI"
-            items={[
-              ["Steiks ar kartupeļiem", "€"],
-              ["Cūkgaļas karbonāde", "€"],
-              ["Vistas fileja", "€"],
-            ]}
-          />
+          <MenuCard title="🥩 Otrie ēdieni">
+            <MenuItem name="Steiks ar kartupeļiem" />
+            <MenuItem name="Cūkgaļas karbonāde" />
+            <MenuItem name="Vistas fileja" />
+          </MenuCard>
 
-          <MenuBlock
-            title="DZĒRIENI"
-            items={[
-              ["Alus", "€"],
-              ["Viskijs", "€"],
-              ["Kokteiļi", "€"],
-              ["Bezalkoholiskie dzērieni", "€"],
-            ]}
-          />
+          <MenuCard title="🍺 Dzērieni">
+            <MenuItem name="Alus" />
+            <MenuItem name="Viskijs" />
+            <MenuItem name="Kokteiļi" />
+            <MenuItem name="Bezalkoholiskie dzērieni" />
+          </MenuCard>
+
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-14 text-center text-gray-400">
-        <p className="text-lg">© 2026 Baltijas Biljards Nr. 1 · GaldOUTs</p>
-        <p className="mt-2">Rīga · +371 29237723</p>
+      {/* ===== FOOTER ===== */}
+      <footer className="px-4 pb-10 text-center text-sm text-zinc-400">
+        <p>© 2026 SIA Baltijas Biljards Nr. 1. Reģ. 40203644880 Kalnciema iela 170A., Rīga</p>
+        <p className="mt-1">+37129237723</p>
       </footer>
 
     </div>
   )
 }
 
-function MenuBlock({ title, items }) {
-  return (
-    <div className="mb-20">
+/* ===== COMPONENTS ===== */
 
-      <h3 className="text-2xl md:text-3xl font-bold text-yellow-400
-                     text-center mb-10
-                     tracking-widest
-                     drop-shadow-[0_0_12px_rgba(212,175,55,0.9)]">
+function MenuCard({ title, children }) {
+  return (
+    <div
+      className="rounded-2xl bg-zinc-900 p-4
+                 shadow-[0_0_20px_rgba(0,0,0,0.6)]"
+    >
+      <h3 className="mb-3 text-lg font-bold text-yellow-400">
         {title}
       </h3>
-
-      <div className="space-y-5">
-        {items.map(([name, price], i) => (
-          <div
-            key={i}
-            className="flex justify-between items-center
-                       text-lg md:text-xl
-                       border-b border-dotted border-yellow-300/40
-                       pb-3"
-          >
-            <span className="tracking-wide">{name}</span>
-            <span className="text-yellow-300 font-semibold tracking-widest">
-              {price}
-            </span>
-          </div>
-        ))}
+      <div className="space-y-2 text-sm">
+        {children}
       </div>
+    </div>
+  )
+}
 
+function MenuItem({ name }) {
+  return (
+    <div className="flex justify-between items-center
+                    border-b border-dotted border-zinc-600 pb-1">
+      <span>{name}</span>
+      <span className="text-yellow-400 font-medium">€</span>
     </div>
   )
 }
