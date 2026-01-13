@@ -42,7 +42,7 @@ function App() {
             </a>
 
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/place/Kalnciema+Iela+170A,+Zemgales+priek%C5%A1pils%C4%93ta,+R%C4%ABga,+LV-1046/@56.9291662,24.0175747,17z/data=!3m1!4b1!4m6!3m5!1s0x46eed0762991254b:0x727eac225d607640!8m2!3d56.9291662!4d24.0201496!16s%2Fg%2F11gwl3m5q6?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
               target="_blank"
               rel="noreferrer"
               className="rounded-xl border-2 border-yellow-400
